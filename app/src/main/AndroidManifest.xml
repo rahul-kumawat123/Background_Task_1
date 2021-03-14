@@ -26,6 +26,9 @@
             </intent-filter>
         </receiver>
         <service android:name=".MusicServiceActivity"/>
+        <service android:name=".BoundServiceActivity"
+            android:exported="true"
+            android:enabled="true"/>
 
     </application>
 

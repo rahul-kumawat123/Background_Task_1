@@ -3,15 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/gradient"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/batteryTextView"
-        android:layout_width="247dp"
-        android:layout_height="130dp"
+        android:id="@+id/outputTextView"
+        android:layout_width="@dimen/tv_width"
+        android:layout_height="@dimen/tv_height"
+        android:textColor="@color/white"
         android:gravity="center"
-        android:hint="Hello World"
+        android:hint="@string/hello_world"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,9 +23,9 @@
 
     <Button
         android:id="@+id/startMusicButton"
-        android:layout_width="148dp"
-        android:layout_height="58dp"
-        android:text="Start Music"
+        android:layout_width="@dimen/start_music_btn_width"
+        android:layout_height="@dimen/start_music_btn_height"
+        android:text="@string/start_music"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.114"
@@ -33,16 +35,26 @@
 
     <Button
         android:id="@+id/stopMusicButton"
-        android:layout_width="136dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="83dp"
-        android:layout_marginLeft="83dp"
-        android:text="Stop  music"
+        android:layout_width="@dimen/stop_music_btn_widht"
+        android:layout_height="@dimen/stop_music_btn_height"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="@string/stop_music"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.384"
         app:layout_constraintStart_toEndOf="@+id/startMusicButton"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.188" />
+        app:layout_constraintVertical_bias="0.183" />
+
+    <Button
+        android:id="@+id/bindLocalServiceButton"
+        android:layout_width="@dimen/bind_service_btn_width"
+        android:layout_height="@dimen/bind_service_btn_height"
+        android:text="@string/bind_local_service"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/outputTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
