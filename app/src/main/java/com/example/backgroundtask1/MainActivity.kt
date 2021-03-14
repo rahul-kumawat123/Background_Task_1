@@ -12,6 +12,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import kotlinx.android.synthetic.main.activity_main.*
 import java.util.jar.Manifest
 
 fun Context.showToast(msg: String){
@@ -55,6 +56,19 @@ class MainActivity : AppCompatActivity() {
         println(BATTERY_STATUS)
         Log.e("battery", "battery status is $BATTERY_STATUS")
         Log.e("battery", "textview data is ${batteryInfo.text}")
+
+
+
+//Music Player with raw file to play song in background.
+
+        val serviceIntent = Intent(applicationContext,MusicServiceActivity::class.java)
+        startMusicButton.setOnClickListener {
+            startService(serviceIntent)
+        }
+        stopMusicButton.setOnClickListener {
+            stopService(serviceIntent)
+        }
+
 
     }
 
